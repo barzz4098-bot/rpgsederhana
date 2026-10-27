@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Battle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game">
+
+        <h1>⚔️ RPG BATTLE ⚔️</h1>
+
+        <!-- PILIH KARAKTER -->
+        <div id="character-screen">
+            <h2>Pilih Karaktermu</h2>
+
+            <div class="characters">
+
+                <button onclick="chooseCharacter('knight')">
+                    ⚔️
+                    <strong>Knight</strong>
+                    <span>HP: 120 | Damage: 20</span>
+                </button>
+
+                <button onclick="chooseCharacter('mage')">
+                    🔮
+                    <strong>Mage</strong>
+                    <span>HP: 90 | Damage: 30</span>
+                </button>
+
+                <button onclick="chooseCharacter('archer')">
+                    🏹
+                    <strong>Archer</strong>
+                    <span>HP: 100 | Damage: 25</span>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- ARENA -->
+        <div id="battle-screen" class="hidden">
+
+            <div class="battle">
+
+                <div class="fighter">
+                    <h2 id="player-name">Knight</h2>
+                    <div class="emoji" id="player-icon">⚔️</div>
+
+                    <p>HP: <span id="player-hp">120</span></p>
+
+                    <div class="hp-bar">
+                        <div id="player-hp-bar"></div>
+                    </div>
+                </div>
+
+                <div class="vs">VS</div>
+
+                <div class="fighter">
+                    <h2>Goblin 👹</h2>
+                    <div class="emoji">👹</div>
+
+                    <p>HP: <span id="enemy-hp">100</span></p>
+
+                    <div class="hp-bar">
+                        <div id="enemy-hp-bar"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="message">
+                Pertarungan dimulai!
+            </div>
+
+            <div class="actions">
+
+                <button onclick="attack()">
+                    ⚔️ Serang
+                </button>
+
+                <button onclick="potion()">
+                    🧪 Potion
+                </button>
+
+                <button onclick="run()">
+                    🏃 Kabur
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- HASIL -->
+        <div id="result-screen" class="hidden">
+
+            <h2 id="result-title"></h2>
+
+            <p id="result-message"></p>
+
+            <button onclick="restartGame()">
+                🔄 Main Lagi
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
